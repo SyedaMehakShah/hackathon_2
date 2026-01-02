@@ -1,55 +1,108 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: N/A -> 1.0.0
+- Added sections: Core Principles (6 principles), Key Standards, Required Features, CLI Interaction Rules, Constraints, Documentation Requirements, Success Criteria
+- Templates requiring updates: N/A
+- Follow-up TODOs: None
+-->
+
+# Python Command Line Todo Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity for Beginner-Friendly Learning
+Code must be approachable for Python beginners; All functionality should be understandable without advanced knowledge; Complex implementations must be justified with clear benefits.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clear, Readable, and Well-Structured Python Code
+Follow PEP 8 coding standards; Use meaningful variable and function names; Maintain consistent formatting throughout the codebase; Organize code with clear separation of concerns.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Reliable CLI Interaction with Predictable Behavior
+The application must respond consistently to user inputs; Error handling must be graceful and informative; The interface should provide clear feedback for all operations.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Maintainable Logic with Clear Separation of Concerns
+Each function should have a single, well-defined purpose; Business logic must be separated from user interface concerns; Code should be organized in a way that allows easy modification and extension.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Minimal Dependencies
+Use only Python standard library components; No external dependencies allowed; Focus on core functionality without feature bloat.
 
-### [PRINCIPLE_6_NAME]
+### VI. Persistent Data Storage
+Tasks must persist between application runs; Use local JSON file for data storage; Ensure data integrity during read/write operations.
 
+## Key Standards
 
-[PRINCIPLE__DESCRIPTION]
+### Programming Language
+- Python 3.x required
+- Follow PEP 8 coding standards
+- Use functions for each core feature
+- Use only Python standard library
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Application Type
+- Command Line Interface (CLI) application
+- Menu-driven interface displayed in terminal
+- Persistent storage using a local JSON file
+- Proper error handling and input validation
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Required Features
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Core Functionality
+- Add a new todo task
+- View all tasks
+- Mark a task as completed
+- Delete a task
+- Exit the application safely
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Task Structure
+Each task must include:
+- Unique ID or index
+- Task title
+- Status (Pending / Completed)
+
+## CLI Interaction Rules
+
+### Interface Design
+- Menu-driven interface displayed in terminal
+- Clear numbered options for user actions
+- Input collected using input()
+- Output displayed using print()
+- User-friendly messages and prompts
+
+### Error Handling
+- Graceful handling of invalid inputs
+- Clear error messages that guide users to correct input
+- Application should not crash on invalid input
+
+## Constraints
+
+### Technical Constraints
+- Single Python file (todo.py)
+- No external libraries
+- Must run using: python todo.py
+- Compatible with Windows, Linux, and macOS
+- No GUI, web, or API components
+
+## Documentation Requirements
+
+### Code Documentation
+- Short header comment explaining:
+  - Project purpose
+  - How to run the application
+- Inline comments for core logic
+- Clear instructions printed inside the CLI menu
+
+## Success Criteria
+
+### Functional Requirements
+- Application runs without crashing
+- All menu options function correctly
+- Tasks persist after restarting the program
+
+### Code Quality Requirements
+- Code is clean, readable, and beginner-friendly
+- No unused variables or dead code
+- Follows all specified constraints
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all development of the Python Command Line Todo Application. All code changes must comply with the principles, standards, and constraints outlined above. Amendments to this constitution require documentation of the change, its impact, and approval from project maintainers.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-01 | **Last Amended**: 2026-01-01
